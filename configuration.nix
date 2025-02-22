@@ -14,10 +14,10 @@
   nixpkgs.config.allowUnfree = true;
 
   # Boot Kernel Packages
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  #boot.kernelPackages = pkgs.linuxPackages_latest;
 
   # Boot Kernel Modules
-  boot.kernelModules = [ "nvidia_uvm" "nvidia_modeset" "nvidia_drm" "nvidia" "wacom" ];
+  #boot.kernelModules = [ "nvidia_uvm" "nvidia_modeset" "nvidia_drm" "nvidia" "wacom" ];
 
   # Specify Kernel Modules in the initial RAM disk
   boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "usb_storage" "nvme" "sd_mod" "sr_mod" ];
@@ -86,8 +86,8 @@
     nvidiaSettings = true;
 
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
-    #package = config.boot.kernelPackages.nvidiaPackages.stable;
-    package = pkgs.linuxPackages_latest.nvidiaPackages.stable;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+    #package = pkgs.linuxPackages_latest.nvidiaPackages.stable;
   }; 
 
 # Enable Nvidia/OpenGL
