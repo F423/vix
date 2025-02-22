@@ -38,10 +38,10 @@
   # Enable OpenGL
   hardware.graphics = {
     enable = true;
+  # Enable 32 Bit OpenGL DRI Support
+    enable32Bit = true;
   };
 
-  # Enable 32 Bit OpenGL DRI Support
-  hardware.opengl.driSupport32Bit = true;
 
   # Enable Blutooth
   hardware.bluetooth.enable = true;
